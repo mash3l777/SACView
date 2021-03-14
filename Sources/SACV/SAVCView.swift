@@ -11,10 +11,6 @@ public protocol SACVDalegate {
      func btnAddAction(_ sender: Any)
 }
 
-public struct PredefindSentence {
-    public let shortCut: String
-    public let sentence: String
-}
 //@IBDesignable
 @available(iOS 13.0, *)
 public class SAVCView: UIView, UITextViewDelegate {
