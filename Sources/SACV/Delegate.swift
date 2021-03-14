@@ -4,6 +4,7 @@
 //  Created by Mashal Ibrahim on 08/03/2021.
 //  Copyright © 2021 Mashal. All rights reserved.
 //
+#if canImport(UIKit)
 
 import UIKit
 
@@ -36,3 +37,4 @@ public class Delegate:NSObject, UICollectionViewDelegate{
     
     
 }
+#endif

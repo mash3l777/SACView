@@ -4,7 +4,8 @@
 //  Created by Mashal Ibrahim on 08/03/2021.
 //  Copyright © 2021 Mashal. All rights reserved.
 //
-
+#if os(iOS)
+#if canImport(UIKit)
 import UIKit
 
 @available(iOS 11.0, *)
@@ -27,3 +28,5 @@ class DragDelegate: NSObject, UICollectionViewDragDelegate {
     
 
 }
+#endif
+#endif

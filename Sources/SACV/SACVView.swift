@@ -1,9 +1,10 @@
 //
-//  SAVCView.swift
+//  SACVView.swift
 //
 //  Created by Mashal Ibrahim on 07/03/2021.
 //  Copyright © 2021 Mashal. All rights reserved.
 //
+#if os(iOS)
 #if canImport(UIKit)
 import UIKit
 public protocol SACVDalegate {
@@ -12,7 +13,7 @@ public protocol SACVDalegate {
 
 @IBDesignable
 @available(iOS 13.0, *)
-open class SAVCView: UIView, UITextViewDelegate {
+open class SACVView: UIView, UITextViewDelegate {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet var collectionView: UICollectionView!
@@ -41,7 +42,7 @@ open class SAVCView: UIView, UITextViewDelegate {
 
     
     private func commonInit() {
-        Bundle.main.loadNibNamed("SAVCView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("SACVView", owner: self, options: nil)
         addSubview(contentView)
         
         contentView.frame = self.bounds
@@ -112,4 +113,5 @@ open class SAVCView: UIView, UITextViewDelegate {
 //    }
     
 }
+#endif
 #endif
