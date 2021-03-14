@@ -16,6 +16,7 @@ struct PredefindSentence {
     let sentence: String
 }
 //@IBDesignable
+@available(iOS 13.0, *)
 class SAVCView: UIView, UITextViewDelegate {
 
     @IBOutlet var contentView: UIView!
@@ -59,7 +60,7 @@ class SAVCView: UIView, UITextViewDelegate {
         collectionView.delegate = collectionDelegate
         collectionView.dataSource = collectionDataSource
         collectionView.dragDelegate = collectionDragDelegate
-        collectionView.register(UINib.init(nibName: "SAVCCell", bundle: nil), forCellWithReuseIdentifier: "SAVCCell")
+        collectionView.register(UINib.init(nibName: "SACVCell", bundle: nil), forCellWithReuseIdentifier: "SACVCell")
         self.isHidden = true
         self.setNeedsDisplay()
     }

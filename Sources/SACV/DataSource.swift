@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class DataSource: NSObject, UICollectionViewDataSource {
     
     var arrSentence: [PredefindSentence]? = []
@@ -18,7 +19,7 @@ class DataSource: NSObject, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"SAVCCell" , for: indexPath) as! SAVCCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"SACVCell" , for: indexPath) as! SACVCell
         cell.lblSentence.text = arrSentence?[indexPath.row].sentence
         
         return cell

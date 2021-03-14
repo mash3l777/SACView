@@ -1,5 +1,5 @@
 //
-//  SAVCCell.swift
+//  SACVCell.swift
 //
 //  Created by Mashal Ibrahim on 08/03/2021.
 //  Copyright © 2021 Mashal. All rights reserved.
@@ -9,7 +9,8 @@ import UIKit
 protocol CellDelegate {
     var textColor:UIColor { get set}
 }
-class SAVCCell: UICollectionViewCell {
+@available(iOS 13.0, *)
+class SACVCell: UICollectionViewCell {
 
     @IBOutlet var lblSentence: UILabel!
     
