@@ -12,8 +12,8 @@ public protocol SACVDalegate {
 }
 
 public struct PredefindSentence {
-    let shortCut: String
-    let sentence: String
+    public let shortCut: String
+    public let sentence: String
 }
 //@IBDesignable
 @available(iOS 13.0, *)
