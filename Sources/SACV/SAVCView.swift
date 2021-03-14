@@ -23,7 +23,7 @@ public class SAVCView: UIView, UITextViewDelegate {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var btnAdd: UIButton!
 
-    var delegate: SACVDalegate?
+    public var delegate: SACVDalegate?
     
     var collectionDelegate:Delegate!
     var collectionDataSource:DataSource!
@@ -65,7 +65,7 @@ public class SAVCView: UIView, UITextViewDelegate {
         self.setNeedsDisplay()
     }
     
-    func append(sentences: [PredefindSentence]){
+   public func append(sentences: [PredefindSentence]){
         arrSentence = sentences
         collectionDataSource.arrSentence = arrSentence
         collectionDragDelegate.arrSentence = arrSentence
