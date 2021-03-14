@@ -12,8 +12,8 @@ public protocol SACVDalegate {
 }
 
 public struct PredefindSentence {
-    public let shortCut: String
-    public let sentence: String
+     let shortCut: String
+     let sentence: String
 }
 //@IBDesignable
 @available(iOS 13.0, *)
@@ -65,7 +65,7 @@ public class SAVCView: UIView, UITextViewDelegate {
         self.setNeedsDisplay()
     }
     
-   public func append(sentences: [PredefindSentence]){
+    open func append(sentences: [PredefindSentence]){
         arrSentence = sentences
         collectionDataSource.arrSentence = arrSentence
         collectionDragDelegate.arrSentence = arrSentence
