@@ -8,9 +8,9 @@
 import UIKit
 
 @available(iOS 13.0, *)
-class DataSource: NSObject, UICollectionViewDataSource {
+ class DataSource: NSObject, UICollectionViewDataSource {
     
-    var arrSentence: [PredefindSentence]? = []
+    public var arrSentence: [PredefindSentence]? = []
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrSentence?.count ?? 0

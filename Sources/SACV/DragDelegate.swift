@@ -10,7 +10,7 @@ import UIKit
 @available(iOS 11.0, *)
 class DragDelegate: NSObject, UICollectionViewDragDelegate {
     
-    var arrSentence:[PredefindSentence]? = []
+    public var arrSentence:[PredefindSentence]? = []
     
     
     func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {

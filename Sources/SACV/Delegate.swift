@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Delegate:NSObject, UICollectionViewDelegate{
+public class Delegate:NSObject, UICollectionViewDelegate{
     
     // Uncomment this method to specify if the specified item should be highlighted during tracking
 //    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

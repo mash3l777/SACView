@@ -25,7 +25,7 @@ open class SAVCView: UIView, UITextViewDelegate {
     var collectionDataSource:DataSource!
     var collectionDragDelegate:DragDelegate!
     
-    var arrSentence: [PredefindSentence] = []
+    public var arrSentence: [PredefindSentence] = []
     
     
     required public init?(coder aDecoder: NSCoder) {
