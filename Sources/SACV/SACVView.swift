@@ -9,7 +9,6 @@
 import UIKit
 public protocol SACVDalegate {
     func btnAddAction(_ sender: Any)
-    func append(sentences: [PredefindSentence])
 }
 
 //@IBDesignable
@@ -62,8 +61,7 @@ open class SACVView: UIView, UITextViewDelegate {
         self.setNeedsDisplay()
     }
     
-    open func append(sentences: [PredefindSentence]){
-        delegate?.append(sentences: [PredefindSentence]())
+     func append(sentences: [PredefindSentence]){
         arrSentence = sentences
         collectionDataSource.arrSentence = arrSentence
         collectionDragDelegate.arrSentence = arrSentence
