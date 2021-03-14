@@ -61,7 +61,7 @@ open class SAVCView: UIView, UITextViewDelegate {
         self.setNeedsDisplay()
     }
     
-    open func append(_ sentences: [PredefindSentence]){
+    open func append(sentences: [PredefindSentence]){
         arrSentence = sentences
         collectionDataSource.arrSentence = arrSentence
         collectionDragDelegate.arrSentence = arrSentence
