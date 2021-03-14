@@ -10,7 +10,7 @@ import Foundation
 public struct PredefindSentence {
     public var shortCut: String = ""
     public var sentence: String = ""
-    init(myshortCut:String,mysentence:String) {
+    public init(myshortCut:String,mysentence:String) {
         shortCut = myshortCut
         sentence = mysentence
     }
