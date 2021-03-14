@@ -11,7 +11,7 @@ public protocol SACVDalegate {
      func btnAddAction(_ sender: Any)
 }
 
-public struct PredefindSentence {
+open struct PredefindSentence {
      let shortCut: String
      let sentence: String
 }
