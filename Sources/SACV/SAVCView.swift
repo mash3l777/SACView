@@ -7,17 +7,17 @@
 
 import UIKit
 
- protocol SACVDalegate {
+public protocol SACVDalegate {
      func btnAddAction(_ sender: Any)
 }
 
-struct PredefindSentence {
+public struct PredefindSentence {
     let shortCut: String
     let sentence: String
 }
 //@IBDesignable
 @available(iOS 13.0, *)
-class SAVCView: UIView, UITextViewDelegate {
+public class SAVCView: UIView, UITextViewDelegate {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet var collectionView: UICollectionView!
@@ -76,11 +76,11 @@ class SAVCView: UIView, UITextViewDelegate {
         delegate?.btnAddAction(self)
     }
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
+    public func textViewDidBeginEditing(_ textView: UITextView) {
         
          self.isHidden = false
     }
-    func textViewDidChange(_ textView: UITextView) {
+    public func textViewDidChange(_ textView: UITextView) {
         let lastSentence = textView.text.split(separator: " ").last ?? ""
         arrSentence.sort(by: { ($0.sentence.lowercased().contains(lastSentence.lowercased()) ? 0 : 1) < ($1.sentence.lowercased().contains(lastSentence.lowercased()) ? 0 : 1) })
         arrSentence.sort(by: { ($0.sentence.lowercased().contains(textView.text.lowercased()) ? 0 : 1) < ($1.sentence.lowercased().contains(textView.text.lowercased()) ? 0 : 1) })
