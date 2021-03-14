@@ -8,7 +8,8 @@
 #if canImport(UIKit)
 import UIKit
 public protocol SACVDalegate {
-     func btnAddAction(_ sender: Any)
+    func btnAddAction(_ sender: Any)
+    func append(sentences: [PredefindSentence])
 }
 
 //@IBDesignable
@@ -62,6 +63,7 @@ open class SACVView: UIView, UITextViewDelegate {
     }
     
     open func append(sentences: [PredefindSentence]){
+        delegate?.append(sentences: [PredefindSentence]())
         arrSentence = sentences
         collectionDataSource.arrSentence = arrSentence
         collectionDragDelegate.arrSentence = arrSentence
