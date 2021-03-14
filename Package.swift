@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SACV",
     platforms: [
-        .iOS(.v13), .macOS("99.0"),.tvOS("99.0")
+        .iOS(.v13)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.

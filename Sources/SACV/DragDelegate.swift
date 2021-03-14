@@ -8,7 +8,7 @@
 #if canImport(UIKit)
 import UIKit
 
-@available(iOS 11.0, *)
+@available(iOS 13.0, *)
 class DragDelegate: NSObject, UICollectionViewDragDelegate {
     
     public var arrSentence:[PredefindSentence]? = []

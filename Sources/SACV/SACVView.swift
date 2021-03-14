@@ -11,7 +11,7 @@ public protocol SACVDalegate {
      func btnAddAction(_ sender: Any)
 }
 
-@IBDesignable
+//@IBDesignable
 @available(iOS 13.0, *)
 open class SACVView: UIView, UITextViewDelegate {
 
