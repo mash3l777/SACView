@@ -17,7 +17,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view opaque="NO" contentMode="scaleToFill" id="msv-uR-0oC" userLabel="SAVCView">
+        <view opaque="NO" contentMode="scaleToFill" id="msv-uR-0oC" userLabel="SACVView" customClass="SACVView" customModule="SACV">
             <rect key="frame" x="0.0" y="0.0" width="361" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
