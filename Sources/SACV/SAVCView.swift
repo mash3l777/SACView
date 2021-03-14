@@ -11,9 +11,9 @@ public protocol SACVDalegate {
      func btnAddAction(_ sender: Any)
 }
 
-//@IBDesignable
+@IBDesignable
 @available(iOS 13.0, *)
-public class SAVCView: UIView, UITextViewDelegate {
+open class SAVCView: UIView, UITextViewDelegate {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet var collectionView: UICollectionView!
@@ -28,7 +28,7 @@ public class SAVCView: UIView, UITextViewDelegate {
     var arrSentence: [PredefindSentence] = []
     
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
 
@@ -61,7 +61,7 @@ public class SAVCView: UIView, UITextViewDelegate {
         self.setNeedsDisplay()
     }
     
-    open func append(sentences: [PredefindSentence]){
+    open func append(_ sentences: [PredefindSentence]){
         arrSentence = sentences
         collectionDataSource.arrSentence = arrSentence
         collectionDragDelegate.arrSentence = arrSentence
