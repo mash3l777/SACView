@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dk-2W-p7R">
-                        <rect key="frame" x="16" y="15" width="235" height="21"/>
+                        <rect key="frame" x="16" y="15" width="265" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -27,7 +27,7 @@
                 <constraints>
                     <constraint firstItem="3dk-2W-p7R" firstAttribute="top" secondItem="hE8-cw-GT2" secondAttribute="top" constant="15" id="Qkd-c0-pZZ"/>
                     <constraint firstItem="3dk-2W-p7R" firstAttribute="leading" secondItem="hE8-cw-GT2" secondAttribute="leading" constant="16" id="kih-wk-eHg"/>
-                    <constraint firstAttribute="trailing" secondItem="3dk-2W-p7R" secondAttribute="trailing" constant="46" id="uIq-Z4-RxS"/>
+                    <constraint firstAttribute="trailing" secondItem="3dk-2W-p7R" secondAttribute="trailing" constant="16" id="uIq-Z4-RxS"/>
                     <constraint firstAttribute="bottom" secondItem="3dk-2W-p7R" secondAttribute="bottom" constant="14" id="uT0-4f-c1a"/>
                 </constraints>
             </collectionViewCellContentView>
