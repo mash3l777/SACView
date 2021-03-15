@@ -97,7 +97,7 @@ open class SACVView: UIView, UITextViewDelegate {
         let lastSentence = textView.text.split(separator: " ").last ?? ""
         for code in arrSentence {
             if code.shortCut == lastSentence {
-                textView.text.replaceSubrange(code.shortCut.startIndex..<code.shortCut.endIndex, with: code.sentence)
+                textView.text.replaceSubrange(lastSentence.startIndex..<lastSentence.endIndex, with: code.sentence)
             }
         }
     }
