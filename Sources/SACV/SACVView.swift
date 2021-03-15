@@ -49,7 +49,6 @@ open class SACVView: UIView, UITextViewDelegate {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
 
-        collectionView.register(UINib(nibName: "SACVCell", bundle: Bundle.init(for: SACVCell.self)), forCellWithReuseIdentifier: "SACVCell")
         collectionDelegate = Delegate().self
         collectionDataSource = DataSource().self
         collectionDragDelegate = DragDelegate().self
@@ -57,6 +56,7 @@ open class SACVView: UIView, UITextViewDelegate {
         collectionView.delegate = collectionDelegate
         collectionView.dataSource = collectionDataSource
         collectionView.dragDelegate = collectionDragDelegate
+//        collectionView.register(UINib(nibName: "SACVCell", bundle: Bundle.init(for: SACVCell.self)), forCellWithReuseIdentifier: "SACVCell")
         //(UINib.init(nibName: "SACVCell", bundle: nil), forCellWithReuseIdentifier: "SACVCell")
         self.isHidden = true
         self.setNeedsDisplay()
