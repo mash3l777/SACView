@@ -12,7 +12,7 @@ protocol CellDelegate {
 @available(iOS 13.0, *)
 class SACVCell: UICollectionViewCell {
 
-    @IBOutlet var lblSentence: UILabel!
+//    @IBOutlet var lblSentence: UILabel!
     
     var delegate: CellDelegate?
     override func awakeFromNib() {
