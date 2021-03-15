@@ -56,7 +56,7 @@ open class SACVView: UIView, UITextViewDelegate {
         collectionView.delegate = collectionDelegate
         collectionView.dataSource = collectionDataSource
         collectionView.dragDelegate = collectionDragDelegate
-        collectionView.register(UINib(nibName: "SACVCell", bundle: Bundle.init(for: SACVView.self)), forCellWithReuseIdentifier: "SACVCell")
+        collectionView.register(UINib(nibName: "SACVCell", bundle: Bundle.init(for: SACVCell.self)), forCellWithReuseIdentifier: "SACVCell")
         //(UINib.init(nibName: "SACVCell", bundle: nil), forCellWithReuseIdentifier: "SACVCell")
         self.isHidden = true
         self.setNeedsDisplay()
