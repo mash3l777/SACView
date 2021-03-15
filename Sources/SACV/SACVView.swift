@@ -93,8 +93,18 @@ open class SACVView: UIView, UITextViewDelegate {
         collectionDragDelegate.arrSentence = arrSentence
         
         self.collectionView.reloadData()
-        self.collectionView.scrollToItem(at: IndexPath.init(item: 0, section: 0), at: .top, animated: true)
+        self.collectionView.scrollsToTop = true
 
+    }
+    
+    
+    public func textViewDidEndEditing(_ textView: UITextView) {
+        let lastSentence = textView.text.split(separator: " ").last ?? ""
+        for code in arrSentence {
+            if code.shortCut == lastSentence {
+                textView.text.replaceSubrange(code.shortCut.startIndex..<code.shortCut.endIndex, with: code.sentence)
+            }
+        }
     }
     
     // MARK: - Properties
