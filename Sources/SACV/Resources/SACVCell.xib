@@ -32,6 +32,9 @@
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="297" height="50"/>
+            <connections>
+                <outlet property="lblSentence" destination="3dk-2W-p7R" id="XAn-Le-Cav"/>
+            </connections>
             <point key="canvasLocation" x="21" y="117"/>
         </collectionViewCell>
     </objects>
