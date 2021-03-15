@@ -17,8 +17,6 @@ class SACVCell: UICollectionViewCell {
     var delegate: CellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
-        Bundle.module.loadNibNamed("SACVCell", owner: self, options: nil)
-
         // Initialization code
         delegate?.textColor = .label
         self.layer.cornerRadius = self.layer.bounds.height/2
