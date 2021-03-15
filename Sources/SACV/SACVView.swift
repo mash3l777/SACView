@@ -71,6 +71,7 @@ open class SACVView: UIView, UITextViewDelegate {
     
     @IBAction func btnAddAction(_ sender: Any) {
         delegate?.btnAddAction(self)
+        
     }
     
     public func textViewDidBeginEditing(_ textView: UITextView) {
@@ -82,12 +83,18 @@ open class SACVView: UIView, UITextViewDelegate {
         arrSentence.sort(by: { ($0.sentence.lowercased().contains(lastSentence.lowercased()) ? 0 : 1) < ($1.sentence.lowercased().contains(lastSentence.lowercased()) ? 0 : 1) })
         arrSentence.sort(by: { ($0.sentence.lowercased().contains(textView.text.lowercased()) ? 0 : 1) < ($1.sentence.lowercased().contains(textView.text.lowercased()) ? 0 : 1) })
         
+        for code in arrSentence {
+            if code.shortCut == lastSentence {
+                textView.text.replaceSubrange(code.shortCut.startIndex..<code.shortCut.endIndex, with: code.sentence)
+            }
+        }
+        
         collectionDataSource.arrSentence = arrSentence
         collectionDragDelegate.arrSentence = arrSentence
         
-        
         self.collectionView.reloadData()
-        
+        self.collectionView.scrollToItem(at: IndexPath.init(item: 0, section: 0), at: .top, animated: true)
+
     }
     
     // MARK: - Properties
