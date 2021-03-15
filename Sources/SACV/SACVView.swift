@@ -5,7 +5,6 @@
 //  Copyright © 2021 Mashal. All rights reserved.
 //
 #if os(iOS)
-#if canImport(UIKit)
 import UIKit
 public protocol SACVDalegate {
     func btnAddAction(_ sender: Any)
@@ -57,7 +56,8 @@ open class SACVView: UIView, UITextViewDelegate {
         collectionView.delegate = collectionDelegate
         collectionView.dataSource = collectionDataSource
         collectionView.dragDelegate = collectionDragDelegate
-        collectionView.register(UINib.init(nibName: "SACVCell", bundle: nil), forCellWithReuseIdentifier: "SACVCell")
+        collectionView.register(UINib(nibName: "SACVCell", bundle: Bundle.init(for: SACVView.self)), forCellWithReuseIdentifier: "SACVCell")
+        //(UINib.init(nibName: "SACVCell", bundle: nil), forCellWithReuseIdentifier: "SACVCell")
         self.isHidden = true
         self.setNeedsDisplay()
     }
@@ -114,5 +114,4 @@ open class SACVView: UIView, UITextViewDelegate {
 //    }
     
 }
-#endif
 #endif
