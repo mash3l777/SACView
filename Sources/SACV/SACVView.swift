@@ -82,18 +82,13 @@ open class SACVView: UIView, UITextViewDelegate {
         let lastSentence = textView.text.split(separator: " ").last ?? ""
         arrSentence.sort(by: { ($0.sentence.lowercased().contains(lastSentence.lowercased()) ? 0 : 1) < ($1.sentence.lowercased().contains(lastSentence.lowercased()) ? 0 : 1) })
         arrSentence.sort(by: { ($0.sentence.lowercased().contains(textView.text.lowercased()) ? 0 : 1) < ($1.sentence.lowercased().contains(textView.text.lowercased()) ? 0 : 1) })
-        
-        for code in arrSentence {
-            if code.shortCut == lastSentence {
-                textView.text.replaceSubrange(code.shortCut.startIndex..<code.shortCut.endIndex, with: code.sentence)
-            }
-        }
+
         
         collectionDataSource.arrSentence = arrSentence
         collectionDragDelegate.arrSentence = arrSentence
         
         self.collectionView.reloadData()
-        self.collectionView.scrollsToTop = true
+        self.collectionView.scrollToItem(at:[0,0], at:.left, animated: true)
 
     }
     
