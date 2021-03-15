@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "SACV",
             dependencies: [],
-            resources: [.process("Resources")]),
+            resources: [.process("Resources"), .copy("Resources/SACVCell.xib")]),
         .testTarget(
             name: "SACVTests",
             dependencies: ["SACV"]),
