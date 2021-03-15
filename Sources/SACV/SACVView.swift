@@ -42,6 +42,7 @@ open class SACVView: UIView, UITextViewDelegate {
 
     
     private func commonInit() {
+        Bundle.module.loadNibNamed("SACVView", owner: self, options: nil)
 //        Bundle.main.loadNibNamed("SACVView", owner: self, options: nil)
         addSubview(contentView)
         
