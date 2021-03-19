@@ -108,22 +108,12 @@ open class SACVView: UIView, UITextViewDelegate {
     var addButton: Bool = false {
         didSet {
             if addButton {
-                self.btnAdd.isHidden  = false
+                self.btnAdd.isHidden  = true
             }else{
                 self.btnAdd.isHidden  = false
             }
         }
     }
-    
-    
-//    @IBInspectable
-//    var textColor: UIColor = .label {
-//        didSet {
-//
-//            CellDelegat = textColor
-//
-//        }
-//    }
     
 }
 #endif
